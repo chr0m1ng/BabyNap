@@ -1,0 +1,88 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="375" height="812" rx="40" fill="#F9F9F9"/>
+  <!-- Dynamic Island -->
+  <rect x="112.5" y="24" width="150" height="36" rx="18" fill="#111" fill-opacity="0.92"/>
+  <!-- Header -->
+  <text x="32" y="90" font-size="28" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E" font-weight="bold">Relatório</text>
+  <!-- Gráfico de barras -->
+  <rect x="16" y="110" width="343" height="220" rx="18" fill="#FFF"/>
+  <!-- Filtro de período estilo segmented control -->
+  <g>
+    <!-- Segmented control centralizado -->
+    <rect x="82.5" y="125" width="210" height="36" rx="18" fill="#F2F2F7"/>
+    <!-- Selecionado: 7 dias -->
+    <rect x="82.5" y="125" width="70" height="36" rx="18" fill="#007AFF"/>
+    <text x="117.5" y="150" text-anchor="middle" font-size="16" font-family="-apple-system, SF Pro Display, Arial" fill="#FFF" font-weight="bold">7 dias</text>
+    <text x="187.5" y="150" text-anchor="middle" font-size="16" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF">Mês</text>
+    <text x="257.5" y="150" text-anchor="middle" font-size="16" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF">Total</text>
+  </g>
+  <!-- Barras -->
+  <g>
+    <!-- Barra 1: 30 azul (dormindo), 20 verde (acordado) -->
+    <rect x="50" y="280" width="18" height="30" rx="6" fill="#007AFF"/>
+    <rect x="50" y="310" width="18" height="20" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 2: 50 azul, 30 verde -->
+    <rect x="80" y="260" width="18" height="50" rx="6" fill="#007AFF"/>
+    <rect x="80" y="310" width="18" height="30" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 3: 20 azul, 10 verde -->
+    <rect x="110" y="300" width="18" height="20" rx="6" fill="#007AFF"/>
+    <rect x="110" y="320" width="18" height="10" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 4: 60 azul, 40 verde -->
+    <rect x="140" y="240" width="18" height="60" rx="6" fill="#007AFF"/>
+    <rect x="140" y="300" width="18" height="40" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 5: 40 azul, 20 verde -->
+    <rect x="170" y="270" width="18" height="40" rx="6" fill="#007AFF"/>
+    <rect x="170" y="310" width="18" height="20" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 6: 10 azul, 10 verde -->
+    <rect x="200" y="320" width="18" height="10" rx="6" fill="#007AFF"/>
+    <rect x="200" y="330" width="18" height="10" rx="0 0 6 6" fill="#34C759"/>
+    <!-- Barra 7: 35 azul, 35 verde -->
+    <rect x="230" y="275" width="18" height="35" rx="6" fill="#007AFF"/>
+    <rect x="230" y="310" width="18" height="35" rx="0 0 6 6" fill="#34C759"/>
+  </g>
+  <!-- Legenda dos dias -->
+  <text x="59" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">S</text>
+  <text x="89" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">T</text>
+  <text x="119" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">Q</text>
+  <text x="149" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">Q</text>
+  <text x="179" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">S</text>
+  <text x="209" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">S</text>
+  <text x="239" y="355" text-anchor="middle" font-size="12" fill="#8E8E93">D</text>
+  <!-- Resumo -->
+  <!-- Espaçamento igual entre os cards de resumo -->
+  <!-- Card: Horas dormidas -->
+  <rect x="16" y="370" width="343" height="60" rx="14" fill="#FFF"/>
+  <text x="32" y="395" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Horas dormidas nos últimos 7 dias</text>
+  <text x="32" y="420" font-size="24" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF" font-weight="bold">10h 45m</text>
+  <!-- Card: Horas acordadas -->
+  <rect x="16" y="450" width="343" height="60" rx="14" fill="#FFF"/>
+  <text x="32" y="475" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Horas acordadas nos últimos 7 dias</text>
+  <text x="32" y="500" font-size="24" font-family="-apple-system, SF Pro Display, Arial" fill="#34C759" font-weight="bold">5h 20m</text>
+  <!-- Card: Média acordado por dia -->
+  <rect x="16" y="530" width="343" height="60" rx="14" fill="#FFF"/>
+  <text x="32" y="555" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Média acordado por dia</text>
+  <text x="32" y="580" font-size="24" font-family="-apple-system, SF Pro Display, Arial" fill="#34C759">0h 45m</text>
+  <!-- Card: Média dormindo por dia -->
+  <rect x="16" y="610" width="343" height="60" rx="14" fill="#FFF"/>
+  <text x="32" y="635" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Média dormindo por dia</text>
+  <text x="32" y="660" font-size="24" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF">1h 20m</text>
+  <!-- Barra de navegação inferior (tab bar) -->
+  <path d="M0,752 h375 v20 a40,40 0 0 1 -40,40 h-295 a40,40 0 0 1 -40,-40 v-20 z" fill="#F9F9F9"/>
+  <!-- Aba Início -->
+  <g transform="translate(90,755)">
+    <circle cx="0" cy="0" r="22" fill="#F9F9F9"/>
+    <path d="M-8 8V-8H-16V8H-24V-12.5L0-24L24-12.5V8H16V-8H8V8Z" fill="#B0B0B0"/>
+  </g>
+  <text x="90" y="783" text-anchor="middle" font-size="12" font-family="SF Pro Display, Arial" fill="#B0B0B0">Início</text>
+  <!-- Aba Relatório (selecionada) -->
+  <g transform="translate(285,755)">
+    <circle cx="0" cy="0" r="22" fill="#E6F0FF"/>
+    <rect x="-10" y="-6" width="4" height="12" rx="2" fill="#007AFF"/>
+    <rect x="-2" y="-12" width="4" height="18" rx="2" fill="#007AFF"/>
+    <rect x="6" y="0" width="4" height="6" rx="2" fill="#007AFF"/>
+  </g>
+  <text x="285" y="783" text-anchor="middle" font-size="12" font-family="SF Pro Display, Arial" fill="#007AFF">Relatório</text>
+  <!-- Barra de swipe to home (iOS) -->
+  <rect x="137.5" y="790" width="100" height="5" rx="2.5" fill="#D1D1D6"/>
+</svg>

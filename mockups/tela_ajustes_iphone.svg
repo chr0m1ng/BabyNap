@@ -1,0 +1,27 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="375" height="812" rx="40" fill="#F9F9F9"/>
+  <!-- Dynamic Island -->
+  <rect x="112.5" y="24" width="150" height="36" rx="18" fill="#111" fill-opacity="0.92"/>
+  <!-- Header -->
+  <text x="32" y="90" font-size="28" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E" font-weight="bold">Ajustes</text>
+  <!-- Lista de configurações estilo iOS -->
+  <g>
+    <!-- Card 1: Tempo da janela de sono -->
+    <rect x="16" y="120" width="343" height="60" rx="14" fill="#FFF"/>
+    <text x="32" y="150" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Tempo da janela de sono</text>
+    <rect x="260" y="132" width="80" height="32" rx="8" fill="#F2F2F7"/>
+    <text x="300" y="154" text-anchor="middle" font-size="16" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF">2h 00m</text>
+  </g>
+  <g>
+    <!-- Card 2: Notificação antes do limite -->
+    <rect x="16" y="190" width="343" height="60" rx="14" fill="#FFF"/>
+    <text x="32" y="220" font-size="18" font-family="-apple-system, SF Pro Display, Arial" fill="#1C1C1E">Avisar antes do limite</text>
+    <rect x="260" y="202" width="80" height="32" rx="8" fill="#F2F2F7"/>
+    <text x="300" y="224" text-anchor="middle" font-size="16" font-family="-apple-system, SF Pro Display, Arial" fill="#007AFF">15 min</text>
+  </g>
+  <!-- Separadores -->
+  <rect x="16" y="180" width="343" height="2" fill="#F2F2F7"/>
+  <!-- Barra de swipe to home (iOS) -->
+  <rect x="137.5" y="790" width="100" height="5" rx="2.5" fill="#D1D1D6"/>
+</svg>

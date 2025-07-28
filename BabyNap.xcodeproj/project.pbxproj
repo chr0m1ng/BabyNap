@@ -6,8 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9BC89AF92E36ACB600B7782F /* tela_inicial_iphone_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF42E36ACB600B7782F /* tela_inicial_iphone_acordado.svg */; };
+		9BC89AFA2E36ACB600B7782F /* tela_relatorio_iphone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF72E36ACB600B7782F /* tela_relatorio_iphone.svg */; };
+		9BC89AFB2E36ACB600B7782F /* tela_principal_watch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF52E36ACB600B7782F /* tela_principal_watch.svg */; };
+		9BC89AFC2E36ACB600B7782F /* tela_inicial_iphone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF32E36ACB600B7782F /* tela_inicial_iphone.svg */; };
+		9BC89AFD2E36ACB600B7782F /* tela_ajustes_iphone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF22E36ACB600B7782F /* tela_ajustes_iphone.svg */; };
+		9BC89AFE2E36ACB600B7782F /* tela_principal_watch_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF62E36ACB600B7782F /* tela_principal_watch_acordado.svg */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		9BC89ADF2E36ACA900B7782F /* BabyNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC89AF22E36ACB600B7782F /* tela_ajustes_iphone.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_ajustes_iphone.svg; sourceTree = "<group>"; };
+		9BC89AF32E36ACB600B7782F /* tela_inicial_iphone.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_inicial_iphone.svg; sourceTree = "<group>"; };
+		9BC89AF42E36ACB600B7782F /* tela_inicial_iphone_acordado.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_inicial_iphone_acordado.svg; sourceTree = "<group>"; };
+		9BC89AF52E36ACB600B7782F /* tela_principal_watch.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_principal_watch.svg; sourceTree = "<group>"; };
+		9BC89AF62E36ACB600B7782F /* tela_principal_watch_acordado.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_principal_watch_acordado.svg; sourceTree = "<group>"; };
+		9BC89AF72E36ACB600B7782F /* tela_relatorio_iphone.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_relatorio_iphone.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +60,7 @@
 		9BC89AD62E36ACA900B7782F = {
 			isa = PBXGroup;
 			children = (
+				9BC89AF82E36ACB600B7782F /* mockups */,
 				9BC89AE12E36ACA900B7782F /* BabyNap */,
 				9BC89AE02E36ACA900B7782F /* Products */,
 			);
@@ -56,6 +72,19 @@
 				9BC89ADF2E36ACA900B7782F /* BabyNap.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9BC89AF82E36ACB600B7782F /* mockups */ = {
+			isa = PBXGroup;
+			children = (
+				9BC89AF22E36ACB600B7782F /* tela_ajustes_iphone.svg */,
+				9BC89AF32E36ACB600B7782F /* tela_inicial_iphone.svg */,
+				9BC89AF42E36ACB600B7782F /* tela_inicial_iphone_acordado.svg */,
+				9BC89AF52E36ACB600B7782F /* tela_principal_watch.svg */,
+				9BC89AF62E36ACB600B7782F /* tela_principal_watch_acordado.svg */,
+				9BC89AF72E36ACB600B7782F /* tela_relatorio_iphone.svg */,
+			);
+			path = mockups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +133,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 9BC89AD62E36ACA900B7782F;
 			minimizedProjectReferenceProxies = 1;
@@ -122,6 +152,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC89AF92E36ACB600B7782F /* tela_inicial_iphone_acordado.svg in Resources */,
+				9BC89AFA2E36ACB600B7782F /* tela_relatorio_iphone.svg in Resources */,
+				9BC89AFB2E36ACB600B7782F /* tela_principal_watch.svg in Resources */,
+				9BC89AFC2E36ACB600B7782F /* tela_inicial_iphone.svg in Resources */,
+				9BC89AFD2E36ACB600B7782F /* tela_ajustes_iphone.svg in Resources */,
+				9BC89AFE2E36ACB600B7782F /* tela_principal_watch_acordado.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,11 +186,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BabyNap;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -180,11 +217,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BabyNap;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -258,6 +296,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -315,6 +354,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

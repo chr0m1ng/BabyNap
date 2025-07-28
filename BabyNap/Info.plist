@@ -2,9 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.chr0m1ng.BabyNap.napTimer</string>
+		<string>com.chr0m1ng.BabyNap.backgroundRefresh</string>
+	</array>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>This app needs to send notifications to remind you about your baby's nap schedule and timer alerts.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
+		<string>fetch</string>
+		<string>processing</string>
 	</array>
 </dict>
 </plist>
