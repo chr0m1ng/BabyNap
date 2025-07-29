@@ -12,11 +12,14 @@ import SwiftData
 struct BabyNapApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ActionSession.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false, cloudKitDatabase: .none)
-
+        let appGroupIdentifier = "group.com.chr0m1ngdev.babynap"
         do {
+            let sharedURL = FileManager.default.containerURL(
+                forSecurityApplicationGroupIdentifier: appGroupIdentifier
+            )!.appendingPathComponent("BabyNap.sqlite")
+            let modelConfiguration = ModelConfiguration(schema: schema, url: sharedURL, allowsSave: true)
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
@@ -25,7 +28,7 @@ struct BabyNapApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabContentView()
         }
         .modelContainer(sharedModelContainer)
     }
