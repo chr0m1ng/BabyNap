@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B76BBA82E3D688100DA0A01 /* BabyNap Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B76BB9E2E3D688000DA0A01 /* BabyNap Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9BC89AF92E36ACB600B7782F /* tela_inicial_iphone_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF42E36ACB600B7782F /* tela_inicial_iphone_acordado.svg */; };
 		9BC89AFA2E36ACB600B7782F /* tela_relatorio_iphone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF72E36ACB600B7782F /* tela_relatorio_iphone.svg */; };
 		9BC89AFB2E36ACB600B7782F /* tela_principal_watch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF52E36ACB600B7782F /* tela_principal_watch.svg */; };
@@ -15,7 +16,32 @@
 		9BC89AFE2E36ACB600B7782F /* tela_principal_watch_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF62E36ACB600B7782F /* tela_principal_watch_acordado.svg */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9B76BBA62E3D688100DA0A01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BC89AD72E36ACA900B7782F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B76BB9D2E3D688000DA0A01;
+			remoteInfo = "BabyNapWatchApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B76BBAC2E3D688100DA0A01 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9B76BBA82E3D688100DA0A01 /* BabyNap Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9B76BB9E2E3D688000DA0A01 /* BabyNap Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabyNap Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC89ADF2E36ACA900B7782F /* BabyNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC89AF22E36ACB600B7782F /* tela_ajustes_iphone.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_ajustes_iphone.svg; sourceTree = "<group>"; };
 		9BC89AF32E36ACB600B7782F /* tela_inicial_iphone.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = tela_inicial_iphone.svg; sourceTree = "<group>"; };
@@ -26,6 +52,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B76BBB12E3D6A7400DA0A01 /* Exceptions for "Shared" folder in "BabyNap Watch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ActionSession.swift,
+				Services/NotificationScheduler.swift,
+				ViewModels/HomeViewModel.swift,
+			);
+			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;
+		};
 		9BC89AEC2E36ACAA00B7782F /* Exceptions for "BabyNap" folder in "BabyNap" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -36,6 +71,19 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		9B76BB9F2E3D688000DA0A01 /* BabyNapWatchApp Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "BabyNapWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		9B76BBAE2E3D6A3200DA0A01 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B76BBB12E3D6A7400DA0A01 /* Exceptions for "Shared" folder in "BabyNap Watch" target */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		9BC89AE12E36ACA900B7782F /* BabyNap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -47,6 +95,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B76BB9B2E3D688000DA0A01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BC89ADC2E36ACA900B7782F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,8 +115,10 @@
 		9BC89AD62E36ACA900B7782F = {
 			isa = PBXGroup;
 			children = (
+				9B76BBAE2E3D6A3200DA0A01 /* Shared */,
 				9BC89AF82E36ACB600B7782F /* mockups */,
 				9BC89AE12E36ACA900B7782F /* BabyNap */,
+				9B76BB9F2E3D688000DA0A01 /* BabyNapWatchApp Watch App */,
 				9BC89AE02E36ACA900B7782F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9BC89ADF2E36ACA900B7782F /* BabyNap.app */,
+				9B76BB9E2E3D688000DA0A01 /* BabyNap Watch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +148,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B76BBA92E3D688100DA0A01 /* Build configuration list for PBXNativeTarget "BabyNap Watch" */;
+			buildPhases = (
+				9B76BB9A2E3D688000DA0A01 /* Sources */,
+				9B76BB9B2E3D688000DA0A01 /* Frameworks */,
+				9B76BB9C2E3D688000DA0A01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9B76BB9F2E3D688000DA0A01 /* BabyNapWatchApp Watch App */,
+			);
+			name = "BabyNap Watch";
+			packageProductDependencies = (
+			);
+			productName = "BabyNapWatchApp Watch App";
+			productReference = 9B76BB9E2E3D688000DA0A01 /* BabyNap Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
 		9BC89ADE2E36ACA900B7782F /* BabyNap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BC89AED2E36ACAA00B7782F /* Build configuration list for PBXNativeTarget "BabyNap" */;
@@ -97,12 +177,15 @@
 				9BC89ADB2E36ACA900B7782F /* Sources */,
 				9BC89ADC2E36ACA900B7782F /* Frameworks */,
 				9BC89ADD2E36ACA900B7782F /* Resources */,
+				9B76BBAC2E3D688100DA0A01 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B76BBA72E3D688100DA0A01 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				9B76BBAE2E3D6A3200DA0A01 /* Shared */,
 				9BC89AE12E36ACA900B7782F /* BabyNap */,
 			);
 			name = BabyNap;
@@ -122,6 +205,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					9B76BB9D2E3D688000DA0A01 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					9BC89ADE2E36ACA900B7782F = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -143,11 +229,19 @@
 			projectRoot = "";
 			targets = (
 				9BC89ADE2E36ACA900B7782F /* BabyNap */,
+				9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B76BB9C2E3D688000DA0A01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BC89ADD2E36ACA900B7782F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +258,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B76BB9A2E3D688000DA0A01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BC89ADB2E36ACA900B7782F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,7 +274,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9B76BBA72E3D688100DA0A01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;
+			targetProxy = 9B76BBA62E3D688100DA0A01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9B76BBAA2E3D688100DA0A01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BabyNapWatchApp Watch App/BabyNapWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PPW5E75Z6J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BabyNapWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.chr0m1ng.BabyNap;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chr0m1ng.BabyNap.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		9B76BBAB2E3D688100DA0A01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BabyNapWatchApp Watch App/BabyNapWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PPW5E75Z6J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BabyNapWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.chr0m1ng.BabyNap;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chr0m1ng.BabyNap.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
 		9BC89AEE2E36ACAA00B7782F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,6 +537,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B76BBA92E3D688100DA0A01 /* Build configuration list for PBXNativeTarget "BabyNap Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B76BBAA2E3D688100DA0A01 /* Debug */,
+				9B76BBAB2E3D688100DA0A01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BC89ADA2E36ACA900B7782F /* Build configuration list for PBXProject "BabyNap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

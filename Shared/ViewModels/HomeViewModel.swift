@@ -16,7 +16,7 @@ enum SleepWindowStatus {
    case overdue
 }
 
-
+@MainActor
 class HomeViewModel: ObservableObject {
     @Published var activeSession: ActionSession?
     @Published var showUndoBanner = false
@@ -72,8 +72,11 @@ class HomeViewModel: ObservableObject {
         // Show undo
         showUndoBanner = true
         undoTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] _ in
-            self?.commitUndo()
+            Task { @MainActor in
+                await self?.commitUndo()
+            }
         }
+
     }
     
     func undoLastAction() {
@@ -97,7 +100,7 @@ class HomeViewModel: ObservableObject {
     }
 
     
-    private func commitUndo() {
+    private func commitUndo() async {
         showUndoBanner = false
         previousSession = nil
         undoTimer?.invalidate()
