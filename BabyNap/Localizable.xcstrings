@@ -26,19 +26,18 @@
       },
       "shouldTranslate" : false
     },
-    "default.baby.name" : {
-      "extractionState" : "manual",
+    "home.baby.status.awake %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Baby"
+            "value" : "%@ is awake for"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bebê"
+            "value" : "%@ está acordado há"
           }
         }
       }
@@ -55,22 +54,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ está dormindo há"
-          }
-        }
-      }
-    },
-    "home.baby.status.wake %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ is awake for"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ está acordado há"
           }
         }
       }
@@ -120,6 +103,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "BabyNap"
+          }
+        }
+      }
+    },
+    "home.status.babyName.default" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The baby"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Bebê"
           }
         }
       }
@@ -201,6 +201,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        }
+      }
+    },
+    "notification.babyName.default" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "your Baby"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "seu Bebê"
+          }
+        }
+      }
+    },
+    "notification.sleepWindowOverdue.body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleep window has passed. Consider helping %@ wind down."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Janela de sono finalizada. Considere ajudar %@ a descansar."
+          }
+        }
+      }
+    },
+    "notification.sleepWindowOverdue.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nap overdue!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hora da soneca"
+          }
+        }
+      }
+    },
+    "notification.sleepWindowWarning.body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Looks like %@ is reaching the max awake time."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parece que %@ está chegando ao limite de tempo acordado."
+          }
+        }
+      }
+    },
+    "notification.sleepWindowWarning.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almost nap time"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quase na hora da soneca"
           }
         }
       }

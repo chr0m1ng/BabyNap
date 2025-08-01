@@ -22,10 +22,15 @@ class HomeViewModel: ObservableObject {
     @Published var showUndoBanner = false
     @AppStorage("sleepWindowMinutes") private var sleepWindowMinutes: Int = 90
     @AppStorage("notificationLeadMinutes") private var notificationLeadMinutes: Int = 15
+    @AppStorage("babyName") private var babyName: String = ""
     
     private var previousSession: ActionSession?
     private var undoTimer: Timer?
     private var modelContext: ModelContext!
+    
+    var displayBabyName: String {
+        babyName.isEmpty ? String(localized: "home.status.babyName.default") : babyName
+    }
 
     func configure(modelContext: ModelContext) {
         self.modelContext = modelContext
@@ -50,6 +55,19 @@ class HomeViewModel: ObservableObject {
         modelContext.insert(session)
         try? modelContext.save()
         activeSession = session
+        
+        // 🔔 Schedule sleep window notifications if it's a Wake session
+        if newAction == .Wake {
+            NotificationScheduler.shared.clearAllSleepWindowNotifications()
+
+            let warningDate = Date().addingTimeInterval(Double((sleepWindowMinutes - notificationLeadMinutes) * 60))
+            let overdueDate = Date().addingTimeInterval(Double(sleepWindowMinutes * 60))
+
+            NotificationScheduler.shared.scheduleSleepWindowWarning(at: warningDate)
+            NotificationScheduler.shared.scheduleSleepWindowOverdue(at: overdueDate)
+        } else {
+            NotificationScheduler.shared.clearAllSleepWindowNotifications()
+        }
 
         // Show undo
         showUndoBanner = true
@@ -72,7 +90,11 @@ class HomeViewModel: ObservableObject {
 
         showUndoBanner = false
         undoTimer?.invalidate()
+
+        // 🔕 Cancel notifications (if user had just marked Wake)
+        NotificationScheduler.shared.clearAllSleepWindowNotifications()
     }
+
     
     private func commitUndo() {
         showUndoBanner = false

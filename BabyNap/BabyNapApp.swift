@@ -1,12 +1,6 @@
-//
-//  BabyNapApp.swift
-//  BabyNap
-//
-//  Created by Gabriel Santos on 27/7/25.
-//
-
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 @main
 struct BabyNapApp: App {
@@ -29,7 +23,20 @@ struct BabyNapApp: App {
     var body: some Scene {
         WindowGroup {
             TabContentView()
+                .onAppear {
+                    requestNotificationPermission()
+                }
         }
         .modelContainer(sharedModelContainer)
+    }
+
+    private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if let error = error {
+                print("⚠️ Notification permission error: \(error)")
+            } else {
+                print(granted ? "✅ Notification permission granted" : "❌ Notification permission denied")
+            }
+        }
     }
 }

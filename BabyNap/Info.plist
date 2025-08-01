@@ -7,8 +7,6 @@
 		<string>com.chr0m1ng.BabyNap.napTimer</string>
 		<string>com.chr0m1ng.BabyNap.backgroundRefresh</string>
 	</array>
-	<key>NSUserNotificationsUsageDescription</key>
-	<string>This app needs to send notifications to remind you about your baby's nap schedule and timer alerts.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

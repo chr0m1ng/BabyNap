@@ -13,8 +13,6 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @State private var isConfigured = false
     @State private var showingSettings = false
-
-    @AppStorage("babyName") private var babyName: String = "Baby"
     
     @State private var undoProgress: CGFloat = 1.0
 
@@ -85,8 +83,8 @@ struct HomeView: View {
                             .alignmentGuide(.firstTextBaseline) { d in d[.bottom] }
 
                         Text(viewModel.activeSession?.action == .Nap
-                             ? "home.baby.status.napping \(babyName)"
-                             : "home.baby.status.wake \(babyName)")
+                             ? "home.baby.status.napping \(viewModel.displayBabyName)"
+                             : "home.baby.status.awake \(viewModel.displayBabyName)")
                             .font(.title2)
                             .bold()
                     }
@@ -169,7 +167,6 @@ struct HomeView: View {
             .navigationTitle(Text("home.navigation.title"))
         }
         .onAppear {
-            if babyName.isEmpty { babyName = "default.baby.name" }
             if !isConfigured {
                 viewModel.configure(modelContext: modelContext)
                 isConfigured = true
