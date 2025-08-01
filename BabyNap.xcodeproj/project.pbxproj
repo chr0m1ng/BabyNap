@@ -55,6 +55,7 @@
 		9B76BBB12E3D6A7400DA0A01 /* Exceptions for "Shared" folder in "BabyNap Watch" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Localizable.xcstrings,
 				Models/ActionSession.swift,
 				Services/NotificationScheduler.swift,
 				ViewModels/HomeViewModel.swift,
