@@ -288,6 +288,38 @@
         }
       }
     },
+    "reports.navigation.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reports"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relatórios"
+          }
+        }
+      }
+    },
+    "reports.placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Work in Progress, available soon"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em construção, disponivel em breve"
+          }
+        }
+      }
+    },
     "settings.baby.name" : {
       "extractionState" : "manual",
       "localizations" : {

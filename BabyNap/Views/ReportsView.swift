@@ -10,8 +10,8 @@ import SwiftUI
 struct ReportsView: View {
     var body: some View {
         NavigationStack {
-            Text("tab.reports")
-                .navigationTitle("tab.reports")
+            Text("reports.placeholder")
+                .navigationTitle("reports.navigation.title")
         }
     }
 }
