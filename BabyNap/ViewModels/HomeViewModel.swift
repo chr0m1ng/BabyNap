@@ -90,6 +90,7 @@ class HomeViewModel: ObservableObject {
 
         showUndoBanner = false
         undoTimer?.invalidate()
+        undoTimer = nil
 
         // 🔕 Cancel notifications (if user had just marked Wake)
         NotificationScheduler.shared.clearAllSleepWindowNotifications()
@@ -99,6 +100,7 @@ class HomeViewModel: ObservableObject {
     private func commitUndo() {
         showUndoBanner = false
         previousSession = nil
+        undoTimer?.invalidate()
         undoTimer = nil
     }
     
