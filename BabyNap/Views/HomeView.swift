@@ -26,53 +26,56 @@ struct HomeView: View {
                 let elapsedTime = viewModel.activeSession.map { now.timeIntervalSince($0.startedAt) } ?? 0
 
                 VStack(spacing: 30) {
-                    if viewModel.showUndoBanner {
-                        VStack(spacing: 4) {
-                            HStack(spacing: 12) {
-                                Image(systemName: "arrow.uturn.backward.circle.fill")
+                    Group {
+                        if viewModel.showUndoBanner {
+                            VStack(spacing: 4) {
+                                HStack(spacing: 12) {
+                                    Image(systemName: "arrow.uturn.backward.circle.fill")
+                                        .foregroundColor(.blue)
+                                    Text("home.undo.bar.title")
+                                        .font(.subheadline)
+                                    Spacer()
+                                    Button("home.undo.bar.action") {
+                                        viewModel.undoLastAction()
+                                    }
+                                    .font(.subheadline.bold())
                                     .foregroundColor(.blue)
-                                Text("home.undo.bar.title")
-                                    .font(.subheadline)
-                                Spacer()
-                                Button("home.undo.bar.action") {
-                                    viewModel.undoLastAction()
                                 }
-                                .font(.subheadline.bold())
-                                .foregroundColor(.blue)
-                            }
-                            .padding(.horizontal)
-                            .padding(.top, 12)
+                                .padding(.horizontal)
+                                .padding(.top, 12)
 
-                            GeometryReader { geo in
-                                RoundedRectangle(cornerRadius: 2)
-                                    .fill(Color.blue)
-                                    .frame(width: geo.size.width * undoProgress, height: 4)
-                                    .animation(.easeInOut(duration: 3), value: undoProgress)
+                                GeometryReader { geo in
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(Color.blue)
+                                        .frame(width: geo.size.width * undoProgress, height: 4)
+                                        .animation(.easeInOut(duration: 3), value: undoProgress)
+                                }
+                                .frame(height: 4)
+                                .padding(.horizontal)
+                                .padding(.bottom, 12)
                             }
-                            .frame(height: 4)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(10)
+                            .shadow(radius: 4)
                             .padding(.horizontal)
-                            .padding(.bottom, 12)
-                        }
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .shadow(radius: 4)
-                        .padding(.horizontal)
-                        .transition(.asymmetric(
-                            insertion: .move(edge: .leading).combined(with: .opacity),
-                            removal: .move(edge: .leading).combined(with: .opacity))
-                        )
-                        .onAppear {
-                            undoProgress = 1.0
-                            withAnimation(.easeInOut(duration: 3)) {
-                                undoProgress = 0.0
+                            .transition(.asymmetric(
+                                insertion: .move(edge: .leading).combined(with: .opacity),
+                                removal: .move(edge: .leading).combined(with: .opacity))
+                            )
+                            .onAppear {
+                                undoProgress = 1.0
+                                withAnimation(.easeInOut(duration: 3)) {
+                                    undoProgress = 0.0
+                                }
                             }
+                            .onDisappear {
+                                undoProgress = 1.0
+                            }
+                        } else {
+                            Color.clear
                         }
-                        .onDisappear {
-                            undoProgress = 1.0
-                        }
-                    } else {
-                        Color.clear.frame(height: 60)
                     }
+                    .frame(height: 72) // Fixed height to prevent layout shifts
 
                     ZStack(alignment: .bottom) {
                         Text(viewModel.activeSession?.action == .Nap ? "🌙" : "☀️")
@@ -87,7 +90,6 @@ struct HomeView: View {
                             .font(.title2)
                             .bold()
                     }
-
 
                     Text(format(elapsedTime))
                         .font(.system(size: 48, weight: .bold, design: .monospaced))
