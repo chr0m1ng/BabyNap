@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "default.baby.name" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -46,6 +49,119 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ está acordado há"
+          }
+        }
+      }
+    },
+    "home.baby.warning.sleepwindow" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attention: Sleep window closing!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atenção: Janela do sono quase no limite!"
+          }
+        }
+      }
+    },
+    "home.baby.warning.sleepwindow.overdue" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danger: Sleep window overdue!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perigo: Janela do sono passou do limite!"
+          }
+        }
+      }
+    },
+    "home.navigation.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BabyNap"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BabyNap"
+          }
+        }
+      }
+    },
+    "home.status.subtext.overdue %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld minutes past the sleep window limit"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Já se passaram %lld minutos desde o fim da janela de sono"
+          }
+        }
+      }
+    },
+    "home.status.subtext.warning %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld minutes left before sleep window limit"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faltam %lld minutos para o limite da janela de sono"
+          }
+        }
+      }
+    },
+    "home.undo.bar.action" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undo"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desfazer"
+          }
+        }
+      }
+    },
+    "home.undo.bar.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action recorded. Undo?"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ação salva. Desfazer?"
           }
         }
       }
