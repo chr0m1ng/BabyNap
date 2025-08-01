@@ -2,7 +2,29 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "shouldTranslate" : false
+    },
+    "☀️" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "☀️"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "🌙" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌙"
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "default.baby.name" : {
       "extractionState" : "manual",

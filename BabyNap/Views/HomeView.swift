@@ -74,10 +74,20 @@ struct HomeView: View {
                         Color.clear.frame(height: 60)
                     }
 
-                    Text(viewModel.activeSession?.action == .Nap
-                         ? "home.baby.status.napping \(babyName)"
-                         : "home.baby.status.wake \(babyName)")
-                        .font(.title2)
+                    ZStack(alignment: .bottom) {
+                        Text(viewModel.activeSession?.action == .Nap ? "🌙" : "☀️")
+                            .font(.system(size: 80))
+                            .opacity(0.12)
+                            .blur(radius: 1)
+                            .alignmentGuide(.firstTextBaseline) { d in d[.bottom] }
+
+                        Text(viewModel.activeSession?.action == .Nap
+                             ? "home.baby.status.napping \(babyName)"
+                             : "home.baby.status.wake \(babyName)")
+                            .font(.title2)
+                            .bold()
+                    }
+
 
                     Text(format(elapsedTime))
                         .font(.system(size: 48, weight: .bold, design: .monospaced))
