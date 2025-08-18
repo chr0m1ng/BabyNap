@@ -78,7 +78,7 @@ struct HomeView: View {
             if reviewService.shouldRequest() {
                 Task {
                     try await Task.sleep(for: .seconds(2))
-                    await requestReview()
+                    requestReview()
                 }
             }
             viewModel.updateElapsedTime(now: Date())
