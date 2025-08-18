@@ -53,6 +53,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Services/NotificationScheduler.swift,
+				Services/RequestReview.swift,
 				ViewModels/HomeViewModel.swift,
 			);
 			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;

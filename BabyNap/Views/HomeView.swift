@@ -7,15 +7,17 @@
 
 import SwiftUI
 import TipKit
+import StoreKit
 
 struct HomeView: View {
+    @Environment(\.requestReview) private var requestReview
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = HomeViewModel()
     @State private var isConfigured = false
     @State private var showingSettings = false
-
     @State private var undoProgress: CGFloat = 1.0
-    
+
+    let reviewService = RequestReview.shared
     let settingsTip = SettingsTip()
 
     var body: some View {
@@ -73,6 +75,12 @@ struct HomeView: View {
         }
         .onAppear {
             try! Tips.configure()
+            if reviewService.shouldRequest() {
+                Task {
+                    try await Task.sleep(for: .seconds(2))
+                    await requestReview()
+                }
+            }
             viewModel.updateElapsedTime(now: Date())
             if !isConfigured {
                 viewModel.configure(modelContext: modelContext)
