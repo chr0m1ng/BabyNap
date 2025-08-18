@@ -140,23 +140,6 @@
         }
       }
     },
-    "home.status.subtext.overdue.minimal" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sleep window limit exceeded."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Janela de sono excedida."
-          }
-        }
-      }
-    },
     "home.status.subtext.warning %lld" : {
       "localizations" : {
         "en" : {
@@ -169,23 +152,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faltam %lld minutos para o limite da janela de sono"
-          }
-        }
-      }
-    },
-    "home.status.subtext.warning.minimal" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sleep window closing soon."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Janela de sono quase no limite."
           }
         }
       }
@@ -468,6 +434,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Janela do sono"
+          }
+        }
+      }
+    },
+    "settings.tip.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can set your baby name and alert preferences here"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você pode adicionar o nome do seu bebê e ajustar seus alertas"
+          }
+        }
+      }
+    },
+    "settings.tip.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change your settings"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altere as configurações"
           }
         }
       }

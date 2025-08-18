@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
@@ -14,6 +15,8 @@ struct HomeView: View {
     @State private var showingSettings = false
 
     @State private var undoProgress: CGFloat = 1.0
+    
+    let settingsTip = SettingsTip()
 
     var body: some View {
         NavigationStack {
@@ -56,8 +59,10 @@ struct HomeView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showingSettings = true
+                        settingsTip.invalidate(reason: .actionPerformed)
                     } label: {
                         Image(systemName: "gear")
+                            .popoverTip(settingsTip, arrowEdge: .bottom)
                     }
                 }
             }
@@ -67,6 +72,7 @@ struct HomeView: View {
             .navigationTitle(Text("home.navigation.title"))
         }
         .onAppear {
+            try! Tips.configure()
             viewModel.updateElapsedTime(now: Date())
             if !isConfigured {
                 viewModel.configure(modelContext: modelContext)
