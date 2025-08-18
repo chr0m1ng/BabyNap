@@ -14,6 +14,8 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     @Published var activeSession: ActionSession?
     @Published var showUndoBanner = false
+    @Published var elapsedTime: TimeInterval = 0
+    
     @AppStorage("sleepWindowMinutes") private var sleepWindowMinutes: Int = 90
     @AppStorage("notificationLeadMinutes") private var notificationLeadMinutes: Int = 15
     @AppStorage("babyName") private var babyName: String = ""
@@ -24,6 +26,10 @@ class HomeViewModel: ObservableObject {
     
     var displayBabyName: String {
         babyName.isEmpty ? String(localized: "home.status.babyName.default") : babyName
+    }
+    
+    var formattedElapsedTime: String {
+        formatTimer(elapsedTime)
     }
 
     func configure(modelContext: ModelContext) {
@@ -70,7 +76,6 @@ class HomeViewModel: ObservableObject {
                 await self?.commitUndo()
             }
         }
-
     }
     
     func undoLastAction() {
@@ -93,12 +98,19 @@ class HomeViewModel: ObservableObject {
         NotificationScheduler.shared.clearAllSleepWindowNotifications()
     }
 
-    
     private func commitUndo() async {
         showUndoBanner = false
         previousSession = nil
         undoTimer?.invalidate()
         undoTimer = nil
+    }
+    
+    func updateElapsedTime(now: Date) {
+        guard let session = activeSession else {
+            elapsedTime = 0
+            return
+        }
+        elapsedTime = now.timeIntervalSince(session.startedAt)
     }
     
     func shouldShowSleepWindowWarning(at date: Date) -> Bool {
@@ -138,7 +150,7 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func formatTimer(_ interval: TimeInterval) -> String {
+    private func formatTimer(_ interval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.zeroFormattingBehavior = .pad

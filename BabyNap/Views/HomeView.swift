@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import TipKit
 
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
@@ -21,7 +20,6 @@ struct HomeView: View {
             TimelineView(.periodic(from: .now, by: 1)) { context in
                 let now = context.date
                 let status = viewModel.sleepWindowStatus(at: now)
-                let elapsedTime = viewModel.activeSession.map { now.timeIntervalSince($0.startedAt) } ?? 0
 
                 VStack(spacing: 30) {
                     UndoBannerView(
@@ -35,11 +33,7 @@ struct HomeView: View {
                         babyName: viewModel.displayBabyName
                     )
 
-                    Text(viewModel.formatTimer(elapsedTime))
-                        .font(.system(size: 48, weight: .bold, design: .monospaced))
-                        .monospacedDigit()
-                        .id(Int(elapsedTime))
-                        .contentTransition(.numericText())
+                    TimerView(timeText: viewModel.formattedElapsedTime, elapsed: viewModel.elapsedTime)
 
                     SleepWindowSectionView(
                         status: status,
@@ -54,6 +48,9 @@ struct HomeView: View {
                     Spacer(minLength: 0)
                 }
                 .padding()
+                .onChange(of: context.date, initial: false) { _, newDate in
+                    viewModel.updateElapsedTime(now: newDate)
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -70,6 +67,7 @@ struct HomeView: View {
             .navigationTitle(Text("home.navigation.title"))
         }
         .onAppear {
+            viewModel.updateElapsedTime(now: Date())
             if !isConfigured {
                 viewModel.configure(modelContext: modelContext)
                 isConfigured = true
@@ -77,6 +75,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 #Preview {
     HomeView()

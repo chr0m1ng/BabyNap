@@ -13,7 +13,6 @@ struct SleepWindowSectionView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            // Subtext line (was a separate block)
             Group {
                 if status != .none, let minutes {
                     Text(status == .overdue
@@ -28,7 +27,6 @@ struct SleepWindowSectionView: View {
             }
             .frame(height: 20)
 
-            // Pill warning (was another block)
             Group {
                 if status != .none {
                     HStack(spacing: 8) {
