@@ -22,6 +22,10 @@ class RequestReview {
     }
     
     func shouldRequest() -> Bool {
-        reviewRequestedCount < MAX_REVIEW_REQUESTS
+        if (reviewRequestedCount < MAX_REVIEW_REQUESTS) {
+            self.reviewRequestedCount += 1
+            return true
+        }
+        return false
     }
 }
