@@ -89,12 +89,11 @@ struct HomeView: View {
                             .bold()
                     }
 
-                    Text(format(elapsedTime))
+                    Text(viewModel.formatTimer(elapsedTime))
                         .font(.system(size: 48, weight: .bold, design: .monospaced))
                         .monospacedDigit()
-                        .transition(.opacity)
                         .id(Int(elapsedTime))
-                        .animation(.easeInOut(duration: 0.25), value: elapsedTime)
+                        .contentTransition(.numericText())
 
                     Group {
                         if status != .none,
@@ -172,13 +171,6 @@ struct HomeView: View {
                 isConfigured = true
             }
         }
-    }
-
-    func format(_ interval: TimeInterval) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute, .second]
-        formatter.zeroFormattingBehavior = .pad
-        return formatter.string(from: interval) ?? "--:--:--"
     }
 }
 

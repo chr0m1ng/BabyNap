@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B76BBA82E3D688100DA0A01 /* BabyNap Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B76BB9E2E3D688000DA0A01 /* BabyNap Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9BC89AF92E36ACB600B7782F /* tela_inicial_iphone_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF42E36ACB600B7782F /* tela_inicial_iphone_acordado.svg */; };
 		9BC89AFA2E36ACB600B7782F /* tela_relatorio_iphone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF72E36ACB600B7782F /* tela_relatorio_iphone.svg */; };
 		9BC89AFB2E36ACB600B7782F /* tela_principal_watch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF52E36ACB600B7782F /* tela_principal_watch.svg */; };
@@ -16,16 +15,6 @@
 		9BC89AFE2E36ACB600B7782F /* tela_principal_watch_acordado.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC89AF62E36ACB600B7782F /* tela_principal_watch_acordado.svg */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9B76BBA62E3D688100DA0A01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BC89AD72E36ACA900B7782F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B76BB9D2E3D688000DA0A01;
-			remoteInfo = "BabyNapWatchApp Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9B76BBAC2E3D688100DA0A01 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -33,7 +22,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				9B76BBA82E3D688100DA0A01 /* BabyNap Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,11 +40,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9B76BBB12E3D6A7400DA0A01 /* Exceptions for "Shared" folder in "BabyNap Watch" target */ = {
+		9B06C01D2E4E77DC00843EDE /* Exceptions for "Shared" folder in "BabyNap Watch" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Localizable.xcstrings,
 				Models/ActionSession.swift,
+				Models/SleepWindowStatus.swift,
+			);
+			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;
+		};
+		9B06C0212E4E77F200843EDE /* Exceptions for "BabyNap" folder in "BabyNap Watch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
 				Services/NotificationScheduler.swift,
 				ViewModels/HomeViewModel.swift,
 			);
@@ -69,18 +64,28 @@
 			);
 			target = 9BC89ADE2E36ACA900B7782F /* BabyNap */;
 		};
+		9BD59DB82E4E73EA00E29C0B /* Exceptions for "BabyNapWatchApp Watch App" folder in "BabyNap Watch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ViewModels/HomeViewModel.swift,
+			);
+			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B76BB9F2E3D688000DA0A01 /* BabyNapWatchApp Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9BD59DB82E4E73EA00E29C0B /* Exceptions for "BabyNapWatchApp Watch App" folder in "BabyNap Watch" target */,
+			);
 			path = "BabyNapWatchApp Watch App";
 			sourceTree = "<group>";
 		};
 		9B76BBAE2E3D6A3200DA0A01 /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9B76BBB12E3D6A7400DA0A01 /* Exceptions for "Shared" folder in "BabyNap Watch" target */,
+				9B06C01D2E4E77DC00843EDE /* Exceptions for "Shared" folder in "BabyNap Watch" target */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				9BC89AEC2E36ACAA00B7782F /* Exceptions for "BabyNap" folder in "BabyNap" target */,
+				9B06C0212E4E77F200843EDE /* Exceptions for "BabyNap" folder in "BabyNap Watch" target */,
 			);
 			path = BabyNap;
 			sourceTree = "<group>";
@@ -183,7 +189,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9B76BBA72E3D688100DA0A01 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9B76BBAE2E3D6A3200DA0A01 /* Shared */,
@@ -275,14 +280,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9B76BBA72E3D688100DA0A01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9B76BB9D2E3D688000DA0A01 /* BabyNap Watch */;
-			targetProxy = 9B76BBA62E3D688100DA0A01 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		9B76BBAA2E3D688100DA0A01 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -358,7 +355,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BabyNap;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,7 +389,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNap/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BabyNap;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

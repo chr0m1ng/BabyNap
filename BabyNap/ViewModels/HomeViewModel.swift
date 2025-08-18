@@ -10,12 +10,6 @@ import SwiftData
 import SwiftUI
 
 
-enum SleepWindowStatus {
-   case none
-   case warning
-   case overdue
-}
-
 @MainActor
 class HomeViewModel: ObservableObject {
     @Published var activeSession: ActionSession?
@@ -142,6 +136,13 @@ class HomeViewModel: ObservableObject {
         default:
             return nil
         }
+    }
+    
+    func formatTimer(_ interval: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter.string(from: interval) ?? "--:--:--"
     }
 
     private func ensureActiveSession() {

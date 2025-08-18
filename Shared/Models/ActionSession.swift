@@ -15,9 +15,9 @@ enum Action: String, Codable {
 
 @Model
 class ActionSession {
-    var startedAt: Date
+    var startedAt: Date = Date.now
     var endedAt: Date?
-    var action: Action
+    var action: Action = Action.Nap
     
     init(startedAt: Date, endedAt: Date? = nil, action: Action) {
         self.startedAt = startedAt
